@@ -1,0 +1,124 @@
+.chonburi-regular {
+    font-family: "Chonburi", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+*{ 
+    margin:0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body{ 
+    height: 100vh; 
+    background:url("img.svg"); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+}
+
+
+main{ 
+
+    
+    color: #ffffff;
+    border-radius: 5px; 
+    width: 35%; 
+    height: 40%; 
+    position: absolute; 
+    top: 70px;
+    backdrop-filter: blur(10px); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-family: "Chonburi", serif;
+
+    flex-direction: column; 
+    gap:1rem;
+
+
+
+}
+
+main input{ 
+    
+    width: 175% ;
+    padding: 0.6rem; 
+    border: none; 
+    border-radius: 5px; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    right: 38%;
+    border-radius: 5px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    flex-direction: column; 
+    gap:1rem; 
+
+    font-family: "Chonburi", serif;
+    font-weight: 80; 
+}
+
+.botoes{ 
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column; 
+    gap: 1rem; 
+    width: 70%; 
+}
+
+.botoes button{ 
+    width: 190%; 
+    padding: 0.4rem; 
+    border: none; 
+    border-radius: 5px;
+    font-weight: 800; 
+    box-shadow: 1px 4px 10px black; 
+    cursor: pointer; 
+    box-shadow: 3px 5px 10px rgb(88, 70, 70);
+    box-shadow:bold; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-family: "Chonburi", serif;
+    font-weight: bold; 
+    flex-direction: column; 
+    position: relative;
+    left: 20%;
+    gap:1rem; 
+}
+
+#login{ 
+    color: #ffffff;
+    background-color : #7b0606; 
+}
+
+#login:active{ /
+    color: #ffffff;
+    background-color : #c1a6a6; 
+}
+
+#cadastro{ 
+    color: #ffffff;
+    background-color: white 
+}
+
+#cadastro:active{ 
+    background-color:#b34848; 
+}
+
+button:active{ 
+    color: rgb(255, 255, 255); 
+}
+button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: white;
+}

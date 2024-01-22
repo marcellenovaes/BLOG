@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Substitua 'SUA_CHAVE_DE_API' pela chave de API válida do Google Cloud Console
+const apiKey = 'AIzaSyAK47ZBQtmf9O-cjjfjPkXYnWqd3HpOsT8';
+const apiUrl = 'https://www.googleapis.com/books/v1/volumes';
+
+// Função para buscar informações sobre um livro
+function buscarLivro(isbn) {
+  const url = `${apiUrl}?q=isbn:${isbn}&key=${apiKey}`;
+
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      // Processar os dados da resposta
+      console.log('Informações do Livro:', data);
+    })
+    .catch(error => {
+      console.error('Erro ao buscar informações do livro:', error);
+    });
+}
+
+// Exemplo de uso: buscar informações para um livro com ISBN específico
+const isbnDoLivro = '9780345377449';
+buscarLivro(isbnDoLivro);
+
+const isbnDoLivro1 = '9780701134310';
+buscarLivro(isbnDoLivro);9780701134310
+
+const isbnDoLivro2 = '9780701134310';
+buscarLivro(isbnDoLivro);9780701134310
+
+const isbnDoLivro3 = '978-0679724872';
+buscarLivro(isbnDoLivro);9780701134310
+
+const isbnDoLivro4 = '9781399703994';
+buscarLivro(isbnDoLivro);9780701134310
+
+const isbnDoLivro5 = '978-1933914008';
+buscarLivro(isbnDoLivro);9780701134310
+
+const isbnDoLivro6 = '9780007176113';
+buscarLivro(isbnDoLivro);9780701134310
+
+const isbnDoLivro7 = '9788954625807';
+buscarLivro(isbnDoLivro);9780701134310
+
+
+
+
+
+    </script>
+</body>
+</html>

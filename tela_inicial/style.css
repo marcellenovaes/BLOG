@@ -1,0 +1,109 @@
+.chonburi-regular {
+    font-family: "Chonburi", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+  
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+body{
+    
+    width: 40%; 
+    height: 46%; 
+    position: absolute; 
+    background-image: url(img3.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+main { 
+    font-family: "Chonburi", serif;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    position: absolute;
+    width: 250%;
+    height: 200%;
+}
+
+main input{
+   
+    width: 25%;
+    height: 4%;
+    border-radius: 10px; 
+    gap:1rem; 
+    text-align: center;
+    font-family: "Chonburi", serif;
+
+}
+
+
+ .botao{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5%;  
+    height:3.2%;
+ 
+
+    border-radius: 7px;
+    font-family: "Chonburi", serif;
+    font-weight: 800; 
+    box-shadow: 1px 4px 10px black; 
+    cursor: pointer; 
+    box-shadow:bold; 
+    align-items: center; 
+    justify-content: center; 
+    font-family: "Chonburi", serif;
+    font-weight: bold; 
+    left: 16px; 
+    top: 0rem;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Estilo do conteúdo do modal */
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  /* Estilo do botão de fechar */
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+
+
+  
