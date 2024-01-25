@@ -1,16 +1,14 @@
+*{ 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .chonburi-regular {
     font-family: "Chonburi", serif;
     font-weight: 400;
     font-style: normal;
   }
-
-
-  
-*{ 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
- }
 
 body{
     
@@ -35,7 +33,6 @@ main {
 }
 
 main input{
-   
     width: 25%;
     height: 4%;
     border-radius: 10px; 
@@ -46,14 +43,12 @@ main input{
 }
 
 
- .botao{ 
+.botao{ 
     display: flex;
     justify-content: center;
     align-items: center;
     width: 5%;  
     height:3.2%;
- 
-
     border-radius: 7px;
     font-family: "Chonburi", serif;
     font-weight: 800; 
@@ -78,8 +73,8 @@ main input{
     background-color: rgba(0, 0, 0, 0.5);
   }
   
-  /* Estilo do conteúdo do modal */
-  .modal-content {
+  /* Estilo do conteúdo do modal  */
+.modal-content {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -87,10 +82,10 @@ main input{
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
-  }
+  } 
   
   /* Estilo do botão de fechar */
-  .close {
+.close {
     position: absolute;
     top: 10px;
     right: 10px;

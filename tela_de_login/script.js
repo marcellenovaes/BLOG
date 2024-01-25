@@ -4,8 +4,7 @@ function Login() {
     console.log(nome , senha);
 
     let pessoas_cadastradas = JSON.parse(localStorage.getItem('banco_de_dados')) || [];
-
-   
+  
     const usuarioExistente = pessoas_cadastradas.find(elements => elements.nome === nome && elements.senha === senha);
 
     if (usuarioExistente) {

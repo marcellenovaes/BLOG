@@ -4,7 +4,7 @@
 <head> 
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Document</title> 
+    <title>WordWildWoman</title> 
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,7 +34,28 @@
 
           <div class="botoes"> 
        
-            <button id="login" onclick="Login()">Login</button>
+        <button id="login" onclick="Login()">Login</button>
+
+        <!-- No momento essa função de entrar com a conta google não funciona, pois o site só roda no local host, 
+            mas quando subir pra a intert, a opção vai aparecer -->
+
+    <div id="g_id_onload"
+        data-client_id="cellepanovaes@gmail.com"
+        data-context="signin"
+        data-ux_mode="popup"
+        data-callback="entrar"
+        data-nonce=""
+        data-auto_prompt="false">
+</div>
+
+<div class="g_id_signin"
+     data-type="standard"
+     data-shape="pill"
+     data-theme="outline"
+     data-text="signin_with"
+     data-size="large"
+     data-logo_alignment="left">
+</div>
 
             <button id="cadastro"><a href=http://127.0.0.1:5500/tela_de_cadastro/index.html>Cadastrar</a></button>
                        

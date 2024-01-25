@@ -1,6 +1,3 @@
-// let botoes = getElementById('btn');
-// botoes.addEventListener("click", () => Cadastrar());
-
 
 pessoas_cadastradas= JSON.parse(localStorage.getItem('banco_de_dados')) || []
    
@@ -16,7 +13,10 @@ pessoas_cadastradas= JSON.parse(localStorage.getItem('banco_de_dados')) || []
     console.log(email);
     console.log(telefone);
     console.log(senha);
-    console.log("Cadastro realizado com sucesso!");
+    console.log("Sucesso!");
+
+    alert("cadastro realizado");
+    
 
     }
 

@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    
+    <title>WorldWildWomen</title>
+
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chonburi&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-   
-</head> 
+</head>
 
 <body>
-    <main> 
-        <label for="pesquisa"></label> 
-        <input class="entrada" type="text" placeholder="pesquise o nome livro que você deseja encontrar"> 
-        <button onclick="Pesquisar()" id="button" class="botao">Pesquisar</button>
+    <main>
+        <label for="pesquisa"></label>
+        <input class="entrada" type="text" id="pesquisaInput" placeholder="Pesquise o nome do livro que você deseja encontrar">
+        <button onclick="Pesquisar()" id="openModalBtn">Pesquisar</button>
+    </main>
 
-          <!-- Botão para abrir o modal -->
-    <button id="openModalBtn">Abrir Modal</button>
-
-    <!-- O modal -->
     <div id="myModal" class="modal">
         <!-- Conteúdo do modal -->
         <div class="modal-content">
@@ -44,15 +40,59 @@
         </div>
     </div>
 
+    <script>
+        const openModalBtn = document.getElementById('openModalBtn');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const modal = document.getElementById('myModal');
+        const pesquisaInput = document.getElementById('pesquisaInput');
+        const apiContentContainer = document.getElementById('modalContent');
+
+        openModalBtn.addEventListener('click', function () {
+            buscarLivros(pesquisaInput.value);
+        });
+
+        closeModalBtn.addEventListener('click', function () {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', function (event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        function buscarLivros(query) {
+            const apiKey = 'AIzaSyAK47ZBQtmf9O-cjjfjPkXYnWqd3HpOsT8';
+            const apiUrl = 'https://www.googleapis.com/books/v1/volumes';
+            const url = `${apiUrl}?q=${query}&key=${apiKey}`;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    renderApiContent(data);
+                    modal.style.display = 'block';
+                })
+                .catch(error => console.error('Erro ao buscar dados da API:', error));
+        }
+
+        function renderApiContent(data) {
+            const livro = data.items[0].volumeInfo;
+
+            const contentHTML = `
+                <p>Título: ${livro.title}</p>
+                <p>Autor(es): ${livro.authors.join(', ')}</p>
+                <p>Editora: ${livro.publisher}</p>
+                <p>Data de Publicação: ${livro.publishedDate}</p>
+                <p>Descrição: ${livro.description}</p>
+            `;
+
+            apiContentContainer.innerHTML = contentHTML;
+        }
+    </script>
+
     <!-- Script para manipular o modal -->
-    <script src="script.js"></script>
+    
 
 </body>
-</html>
-    
-    </main>
 
-
-    
-</body>
 </html>
